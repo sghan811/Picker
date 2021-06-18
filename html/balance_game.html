@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="http://seohanbook.co.kr/Picker/css/Picker_index.css" />
+        <title>Picker</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="http://seohanbook.co.kr/Picker/js/html2canvas.js"></script>
+    </head>
+    <body>
+        <div class="up_bar">
+            <div class="up_bar__logo">
+                <img src="http://seohanbook.co.kr/Picker/pic/main/favicon.png" class="logo">
+            </div>
+            <ul class="up_bar__menu">
+                <li>
+                    <a href="http://seohanbook.co.kr/Picker/">홈</a>
+                </li>
+                <li>
+                    <a href="http://seohanbook.co.kr/Picker/html/balance_selection.html">벨런스 게임</a>
+                </li>
+                <li>
+                    <a href="http://seohanbook.co.kr/Picker/html/login_check.html">벨런스 게임 만들기</a>
+                </li>
+            </ul>
+            <div class="up_bar__link">
+                <ul class="signs">
+                    <li id="link" class="sign2">
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="balance_main">
+            <div class="q1" id="balance_main2">
+                질문
+                <div class="choice_main">
+                    <div class="choice1" id="choice3" onclick="test('yes', function (json) {console.log(json);});">
+
+                    </div>
+                    <div class="choice2" id="choice4" onclick="test('no',function (json) {console.log(json);});">
+
+                    </div>
+                </div>
+                <div class="q2" id="text">
+                    
+                </div>
+            </div>
+        </div>
+        <script src="http://seohanbook.co.kr/Picker/js/mint-test.js"></script>
+        <script>window.onload = function () { capture();};</script>
+        <script src="http://seohanbook.co.kr/Picker/js/sign_in.js"></script>
+    </body>
+</html>

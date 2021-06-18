@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="../css/Picker_index.css" />
+        <title>Picker</title>
+    </head>
+    <body>
+        <div class="up_bar">
+            <div class="up_bar__logo">
+                <img src="../pic/main/favicon.png" class="logo">
+            </div>
+            <ul class="up_bar__menu">
+                <li>
+                    <a href="../index.html">홈</a>
+                </li>
+                <li>
+                    <a href="../html/balance_selection.html">벨런스 게임</a>
+                </li>
+                <li>
+                    <a href="http://seohanbook.co.kr/Picker/html/login_check.html">벨런스 게임 만들기</a>
+                </li>
+            </ul>
+            <div class="up_bar__link">
+                <ul class="signs">
+                    <li id="link" class="sign2">
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="add_main" id="add_main2">
+            <div class="main_1" id="main_2">
+                <div class="form_title_div">
+                    <p class="form_title_p">밸런스 게임 추가</p>
+                </div>
+                <div>
+                    <div>
+                        <a class="form_item_name">제목</a>
+                    </div>
+                    <div>
+                        <input type="text" id="add_main3" class="title_input" placeholder="제목" />
+                    </div>
+                    <div class="form_text_alert_padding">
+                        <div class="form_text_alert"></div>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <a class="form_item_name">내용</a>
+                    </div>
+                    <div>
+                        <textarea class="contant_input" id="contant" autofocus required wrap="hard" placeholder="내용"></textarea>
+                    </div>
+                    <div class="form_text_alert_padding">
+                        <div class="form_text_alert"></div>
+                    </div>
+                </div>
+                <div>
+                    <a class="form_item_name">YES and NO</a>
+                </div>
+                <div>
+                    <input type="text" id="add_main7" class="form_input" placeholder="yes" />
+                </div>
+                <div class="form_select_alert_padding">
+                    <input type="text" id="add_main9" class="form_input" placeholder="no" />
+                </div>
+                <div style="height: 10px;"></div>
+                <button id="add_main11" class="add_main12" onclick="add(function (json) { console.log(json); });">Submit</button>
+            </div>
+        </div>
+        <script src="../js/new_balance_add.js">
+
+        </script>
+        <script src="http://seohanbook.co.kr/Picker/js/sign_in.js"></script>
+    </body>
+</html>
