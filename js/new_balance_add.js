@@ -18,7 +18,7 @@ function add(callback) {
     var yes3 = document.getElementById("add_main7");
     var no3 = document.getElementById("add_main9");
     var text3 = Math.random().toString(36).substr(2, 11);
-    var img2 = text3.value+".png";
+    var img2 = text3+".png";
     var xobj = new XMLHttpRequest();
     if (text3 !== null&&title2 !== null && text2 !== null && img2 !== null && yes3 !== null && no3 !== null) {
         var personInfo = new Object();

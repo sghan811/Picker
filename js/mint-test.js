@@ -1,4 +1,5 @@
 function test(value, callback) {
+    var text = document.createTextNode("");
     var choice1 = document.getElementById("choice3");
     var choice2 = document.getElementById("choice4");
     var urlParams = new URL(window.location.href);
@@ -29,11 +30,60 @@ function test(value, callback) {
                         choice1.appendChild(text);
                         text = document.createTextNode(contant[key].no2);
                         choice2.appendChild(text);
-                        text = document.createTextNode(Math.round(100 * ((ppp - mm) / ppp)) + "%");
-                        choice1.appendChild(text);
-                        text = document.createTextNode(Math.round(100 * (mm / ppp)) + "%");
-                        choice2.appendChild(text);
-                        json_cookie(contant);
+                        if (Math.round(100 * ((ppp - mm) / ppp)) !== 0 && Math.round(100 * ((ppp - mm) / ppp)) >= 20) {
+                            choice1.innerText = "";
+                            choice2.innerText = "";
+                            text = document.createTextNode(contant[key].yes2);
+                            choice1.appendChild(text);
+                            text = document.createTextNode(contant[key].no2);
+                            choice2.appendChild(text);
+                            text = document.createTextNode(Math.round(100 * ((ppp - mm) / ppp)) + "%");
+                            choice1.style.width = Math.round(100 * ((ppp - mm) / ppp)) + "%";
+                            choice1.appendChild(text);
+                            text = document.createTextNode(Math.round(100 * (mm / ppp)) + "%");
+                            choice2.style.width = Math.round(100 * (mm / ppp)) + "%";
+                            choice2.appendChild(text);
+                        } else {
+                            choice1.innerText = "";
+                            choice2.innerText = "";
+                            text = document.createTextNode(contant[key].yes2);
+                            choice1.appendChild(text);
+                            text = document.createTextNode(contant[key].no2);
+                            choice2.appendChild(text);
+                            text = document.createTextNode(Math.round(100 * ((ppp - mm) / ppp)) + "%");
+                            choice1.style.width = "20%";
+                            choice1.appendChild(text);
+                            text = document.createTextNode(Math.round(100 * (mm / ppp)) + "%");
+                            choice2.style.width = "80%";
+                            choice2.appendChild(text);
+                        }
+                        if (Math.round(100 * (mm / ppp)) !== 0 && Math.round(100 * (mm / ppp)) >= 20 && (Math.round(100 * ((ppp - mm) / ppp)) !== 0 && Math.round(100 * ((ppp - mm) / ppp)) >= 20) === true) {
+                            choice1.innerText = "";
+                            choice2.innerText = "";
+                            text = document.createTextNode(contant[key].yes2);
+                            choice1.appendChild(text);
+                            text = document.createTextNode(contant[key].no2);
+                            choice2.appendChild(text);
+                            text = document.createTextNode(Math.round(100 * ((ppp - mm) / ppp)) + "%");
+                            choice1.style.width = Math.round(100 * ((ppp - mm) / ppp)) + "%";
+                            choice1.appendChild(text);
+                            text = document.createTextNode(Math.round(100 * (mm / ppp)) + "%");
+                            choice2.style.width = Math.round(100 * (mm / ppp)) + "%";
+                            choice2.appendChild(text);
+                        } else {
+                            choice1.innerText = "";
+                            choice2.innerText = "";
+                            text = document.createTextNode(contant[key].yes2);
+                            choice1.appendChild(text);
+                            text = document.createTextNode(contant[key].no2);
+                            choice2.appendChild(text);
+                            text = document.createTextNode(Math.round(100 * ((ppp - mm) / ppp)) + "%");
+                            choice1.style.width = "80%";
+                            choice1.appendChild(text);
+                            text = document.createTextNode(Math.round(100 * (mm / ppp)) + "%");
+                            choice2.style.width = "20%";
+                            choice2.appendChild(text);
+                        }
                         json_cookie(contant);
                         break;
                     }
@@ -42,6 +92,7 @@ function test(value, callback) {
         };
         xobj.send(null);
     } else {
+        var text = document.createTextNode("");
         var ppp = 0;
         var xobj = new XMLHttpRequest();
         xobj.overrideMimeType("application/json");
@@ -61,16 +112,60 @@ function test(value, callback) {
                             ppp = Number(contant[key].no) + Number(contant[key].yes);
                             mm = Number(contant[key].no);
                         }
-                        choice1.innerText = "";
-                        choice2.innerText = "";
-                        text = document.createTextNode(contant[key].yes2);
-                        choice1.appendChild(text);
-                        text = document.createTextNode(contant[key].no2);
-                        choice2.appendChild(text);
-                        text = document.createTextNode(Math.round(100 * ((ppp - mm) / ppp)) + "%");
-                        choice1.appendChild(text);
-                        text = document.createTextNode(Math.round(100 * (mm / ppp)) + "%");
-                        choice2.appendChild(text);
+                        if (Math.round(100 * ((ppp - mm) / ppp)) !== 0 && Math.round(100 * ((ppp - mm) / ppp)) >= 20) {
+                            choice1.innerText = "";
+                            choice2.innerText = "";
+                            text = document.createTextNode(contant[key].yes2);
+                            choice1.appendChild(text);
+                            text = document.createTextNode(contant[key].no2);
+                            choice2.appendChild(text);
+                            text = document.createTextNode(Math.round(100 * ((ppp - mm) / ppp)) + "%");
+                            choice1.style.width = Math.round(100 * ((ppp - mm) / ppp)) + "%";
+                            choice1.appendChild(text);
+                            text = document.createTextNode(Math.round(100 * (mm / ppp)) + "%");
+                            choice2.style.width = Math.round(100 * (mm / ppp)) + "%";
+                            choice2.appendChild(text);
+                        } else {
+                            choice1.innerText = "";
+                            choice2.innerText = "";
+                            text = document.createTextNode(contant[key].yes2);
+                            choice1.appendChild(text);
+                            text = document.createTextNode(contant[key].no2);
+                            choice2.appendChild(text);
+                            text = document.createTextNode(Math.round(100 * ((ppp - mm) / ppp)) + "%");
+                            choice1.style.width = "80%";
+                            choice1.appendChild(text);
+                            text = document.createTextNode(Math.round(100 * (mm / ppp)) + "%");
+                            choice2.style.width = "20%";
+                            choice2.appendChild(text);
+                        } 
+                        if (Math.round(100 * (mm / ppp)) !== 0 && Math.round(100 * (mm / ppp)) >= 20 && (Math.round(100 * ((ppp - mm) / ppp)) !== 0 && Math.round(100 * ((ppp - mm) / ppp)) >= 20)===true) {
+                            choice1.innerText = "";
+                            choice2.innerText = "";
+                            text = document.createTextNode(contant[key].yes2);
+                            choice1.appendChild(text);
+                            text = document.createTextNode(contant[key].no2);
+                            choice2.appendChild(text);
+                            text = document.createTextNode(Math.round(100 * ((ppp - mm) / ppp)) + "%");
+                            choice1.style.width = Math.round(100 * ((ppp - mm) / ppp)) + "%";
+                            choice1.appendChild(text);
+                            text = document.createTextNode(Math.round(100 * (mm / ppp)) + "%");
+                            choice2.style.width = Math.round(100 * (mm / ppp)) + "%";
+                            choice2.appendChild(text);
+                        } else {
+                            choice1.innerText = "";
+                            choice2.innerText = "";
+                            text = document.createTextNode(contant[key].yes2);
+                            choice1.appendChild(text);
+                            text = document.createTextNode(contant[key].no2);
+                            choice2.appendChild(text);
+                            text = document.createTextNode(Math.round(100 * ((ppp - mm) / ppp)) + "%");
+                            choice1.style.width = "20%";
+                            choice1.appendChild(text);
+                            text = document.createTextNode(Math.round(100 * (mm / ppp)) + "%");
+                            choice2.style.width = "80%";
+                            choice2.appendChild(text);
+                        }
                         json_cookie(contant);
                         break;
                     }
@@ -111,6 +206,8 @@ function load_set(callback) {
             for (key in contant) {
                 if (key === urlParams.get('name')) {
                     for (key2 in contant[key]) {
+                        choice1.innerText = "";
+                        choice2.innerText = "";
                         text2 = document.createTextNode(contant[key].yes2);
                         choice1.appendChild(text2);
                         text2 = document.createTextNode(contant[key].no2);

@@ -7,7 +7,7 @@ function balance_load(callback) {
     var text;
     var contant;
     xobj.overrideMimeType("application/json");
-    xobj.open('POST', '../json/data.json', true);
+    xobj.open('POST', './json/data.json', true);
     xobj.onreadystatechange = function () {
         if (xobj.readyState == 4 && xobj.status == "200") {
             callback(JSON.parse(xobj.responseText));
@@ -16,10 +16,10 @@ function balance_load(callback) {
                 for (var key2 in contant[key]) {
                     newdiv = document.createElement("div");
                     newdiv.setAttribute("class", "selection1");
-                    newdiv.setAttribute("onclick", "location.href='balance_game.html?name=" + key + "'");
+                    newdiv.setAttribute("onclick", "location.href='html/balance_game.html?name=" + key + "'");
                     newdiv.setAttribute("id", key);
                     newimg = document.createElement("img");
-                    newimg.setAttribute("src", "../pic/"+contant[key].pic);
+                    newimg.setAttribute("src", "./pic/"+contant[key].pic);
                     text = document.createTextNode(contant[key].title);
                     newdiv.appendChild(newimg);
                     newdiv.appendChild(text);
